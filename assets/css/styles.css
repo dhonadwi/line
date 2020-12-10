@@ -1,0 +1,21 @@
+main{
+    display: flex;
+}
+.menu{
+    /* width: 70%; */
+    flex-basis: 80%;
+}
+
+.fav{
+    /* width: 50%; */
+    flex-basis: 20%;
+}
+
+.box{
+/* background-color: aquamarine; */
+}
+
+.pe{
+    height: 200px;
+    text-align: center;
+}

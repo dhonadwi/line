@@ -1,73 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <title>GowFud</title>
 </head>
+
 <body>
-<div class="container">
-  <button onclick="saveForLater()">tes</button>
-   <div class="row">
-      <div class="col s12 m6">
-        <div class="card">
-          <div class="card-image">
-            <img src="assets/images/nasi-goreng.jpg">
-            <span class="card-title black">Nasi Goreng</span>
-            <a class="nasgor btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-          </div>
-          <div class="card-content">
-            <p>Nasi goreng yang satu ini pastinya pas banget nih buat nemenin malam hari kamu.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m6">
-        <div class="card">
-          <div class="card-image">
-            <img src="assets/images/mie-goreng.jpg">
-            <span class="card-title black">Mie Goreng</span>
-            <a class="miegoreng btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-          </div>
-          <div class="card-content">
-            <p>Buat yang lagi pengen makan Mie Goreng, Mie Goreng yang satu ini wajib banget buat kamu. Skuuuy tinggal order aja guyss....</p>
+  <div class="container">
+    <!-- <button onclick="saveForLater()">tes</button> -->
+    <h4>Selamat Datang Di GowFud</h4>
+    <p>Silahkan Pilih Menu Favorit Anda</p>
+    <main>
+      <div class="row menu">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/nasi-goreng.jpg">
+              <span class="card-title black hide-on-small-only">Nasi Goreng</span>
+              <a class="nasgor btn-floating halfway-fab waves-effect waves-light red"><i
+                  class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <p>Nasi goreng yang satu ini pastinya pas banget nih buat nemenin malam hari kamu.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col s12 m6">
-        <div class="card">
-          <div class="card-image">
-            <img src="assets/images/capcay.jpg">
-            <span class="card-title black">Capcay</span>
-            <a class="capcay btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-          </div>
-          <div class="card-content">
-            <p>Nah kalau kamu suka pedas, kamu bisa pesan Capcay sambal matah atau rica-rica.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m6">
-        <div class="card">
-          <div class="card-image">
-            <img src="assets/images/kwetiaw.jpg">
-            <span class="card-title black">Kwetiaw</span>
-            <a class="kwetiaw btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-          </div>
-          <div class="card-content">
-            <p>Kalau lagi bosan sama kwetiaw yang biasa-biasa aja, kwetiaw yang satu ini kayaknya enak nih buat di delivery order.</p>
+        <div class="col s12">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/mie-goreng.jpg">
+              <span class="card-title black hide-on-small-only">Mie Goreng</span>
+              <a class="miegoreng btn-floating halfway-fab waves-effect waves-light red"><i
+                  class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <p>Buat yang lagi pengen makan Mie Goreng, Mie Goreng yang satu ini wajib banget buat kamu. Skuuuy tinggal
+                order aja guyss....</p>
+            </div>
           </div>
         </div>
+        <div class="col s12">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/kwetiaw.jpg">
+              <span class="card-title black hide-on-small-only">Kwetiaw</span>
+              <a class="kwetiaw btn-floating halfway-fab waves-effect waves-light red"><i
+                  class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <p>Kalau lagi bosan sama kwetiaw yang biasa-biasa aja, kwetiaw yang satu ini kayaknya enak nih buat di
+                delivery order.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/capcay.jpg">
+              <span class="card-title black hide-on-small-only">Capcay</span>
+              <a class="capcay btn-floating halfway-fab waves-effect waves-light red"><i
+                  class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <p>Nah kalau kamu suka pedas, kamu bisa pesan Capcay sambal matah atau rica-rica.</p>
+            </div>
+          </div>
+        </div>
+
+
       </div>
-  
-              
+      <div class="fav">
+        <div class="box">
+          <h4>Pesanan</h4>
+          <div class="col s12" id="pesanan">
+            <!-- Card berisi artikel akan disisipkan ke dalam sini. -->
+          </div>
+        </div>
+        <button class="btn btnpesan">Pesan</button>
+      </div>
+    </main>
   </div>
-</div>
 </body>
 <script src="assets/js/materialize.min.js"></script>
 <script src="assets/js/idb.js"></script>
 <script src="assets/js/db.js"></script>
 <script src="assets/js/apps.js"></script>
+<script src="assets/js/app.js"></script>
 <script>
 //   document.addEventListener('DOMContentLoaded',()=>{
 //   const tombol = document.querySelector('#nasgor');
@@ -77,4 +100,5 @@
 
 // })
 </script>
+
 </html>

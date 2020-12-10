@@ -27,15 +27,16 @@ const dbPromised = idb.open("GowFud", 1, upgradeDb => {
 //     ;
 // }
 
-const deleteFav = (key) => {
-  dbPromised.then(function(db) {
+const deleteFav = key => {
+  dbPromised.then(db => {
     var tx = db.transaction('pesanan', 'readwrite');
     var store = tx.objectStore('pesanan');
     store.delete(key);
     return tx.complete;
-  }).then(function() {
+  }).then(() => {
     console.log('Item deleted');
-    window.location = "fav.html";
+    // window.location = "index.html";
+    getSavedOrder();
   });
 }
 
@@ -48,13 +49,13 @@ const getAll = () => {
         const store = tx.objectStore("pesanan");
         return store.getAll();
       })
-      .then(shcedules => {
-        resolve(shcedules);
+      .then(pesanan => {
+        resolve(pesanan);
       });
   });
 }
 
-const favorite =(item) => {
+const favorite = (item) => {
   dbPromised
     .then(db => {
       const tx = db.transaction("pesanan", "readwrite");
@@ -64,6 +65,7 @@ const favorite =(item) => {
     })
     .then(() => {
       M.toast({ html: `Pesanan berhasil di simpan di keranjang.` });
+      getSavedOrder();
     })
     .catch(() => {
       M.toast({ html: `Pesanan sudah pernah disimpan` });
